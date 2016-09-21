@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1474487871 source:d:\projects\programming\c_projects\math challenges\c\oddorevennumber2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
