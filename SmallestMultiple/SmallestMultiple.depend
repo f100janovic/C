@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1474506823 source:d:\projects\programming\c_projects\challenges\c\smallestmultiple\main.c
+	<stdio.h>
+	<stdlib.h>
+

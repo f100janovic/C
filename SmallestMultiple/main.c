@@ -9,17 +9,17 @@ divisible by all of the numbers from 1 to 20?
 **/
 int main()
 {
-    int i,p;
+    int i,p,n;
+    n=1;
     p=5;
-    while(i<20){
-    for (i=1;i<20;i++){
+    for (i=1;i<20;n++){
         if (p%i==0){
-
+            i++;
         }
         else{
             p++;
+            i=1;
         }
-    }
     }
     printf("%d",p);
     return 0;
