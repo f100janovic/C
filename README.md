@@ -9,6 +9,8 @@ All of them can be run by compiling the main.c file in the respective folder and
 
 The shorter scripts won't be commented since they pretty basic, but if I ever decide to make a bigger project, it will be commented appropriately so it can be understood by everyone looking at it.
 
+<hr>
+
 
 Izazovi napisani u C jeziku.
 
