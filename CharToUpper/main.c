@@ -15,5 +15,7 @@ int main()
 		a=a-32;
 	}
 	printf("%c\n", a);
+	printf("Press any key to exit...\n");
+	getche();
 	return 0;
 }

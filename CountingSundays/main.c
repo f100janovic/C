@@ -21,10 +21,9 @@ the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 
 int main()
 {
-    int days,sundays;
+    int days,i;
     days=0;
-    sundays=0;
-    for(int i=1900;i<=2000;i++){
+    for(i=1900;i<=2000;i++){
             if(i%400){
                 days=days+366;
             }
