@@ -26,29 +26,36 @@ int main()
 	*  *
 	*  *
 	****
-ne radi trenutno
 	*/
 
-	int i,n,d;
+	int i,n,d,a,x;
 	char c;
 	c = '*';
 	scanf("%d", &d);
 	n=pow(d,2);
-	for (i=1; i<=n;i++){
-        if (i!=n || i!=1){
-            for (i=1; i<=n;i++){
-                if (i%d==0){
-                    printf("%c\n", c);
-                }
-                else{
-                    printf("%c", c);
+	for (i=1; i<=d;i++){
+            if ((i==1)||(i==d)){
+                printf("\n");
+                for (a=1;a<=d;a++){
+                    printf("*");
                 }
             }
-        }
+            else{
+                printf("\n");
+                for(x=1;x<=d;x++){
+                    if((x==1)||(x==d)){
+                        printf("*");
+                    }
+                    else{
+                        printf(" ");
+                    }
+                }
+            }
 
     }
 return 0;
 }
+
 
 
 
