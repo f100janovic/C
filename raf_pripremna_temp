@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+The goal is to print
+1234
+2341
+3412
+4123
+*/
+int main(){
+
+	int i,j,n;
+	scanf("%d", &n);
+	//prvi for loop je za redove, tj prati u kom smo trenutno redub
+	for (i = 0; i < n   ; i++){
+		/*
+		drugi for loop stampa brojeve
+		i+4 je da bi uvek odstampao 4 broja
+		buduci da se "j" povecava kad i "i"
+		uvek ce da izbaci 4 vrednosti
+		 */
+    	for (j = i; j < i + n; j++){
+    		//stampa ostatak pri deljenju + 1
+	        printf("%d",(j % n) + 1);
+	    }
+	    //salje u novi red
+	    printf("\n");
+	}
+	return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+/*
+The goal is to print
+1111
+1222
+1233
+1234
+*/
+int main(){
+
+	int i,z,n;
+	//prvi for loop je za redove, tj prati u kom smo trenutno redub
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++){
+		//drugi loop stampa 4 cifre u redu
+    	for (z = 1; z <= n; z++){
+    		/*ako broj cifre u redu(z) predje broj reda(i) onda stampa broj reda,
+    		a ako ne, onda stampa broj cifre u redu*/
+	        if(z<=i){
+                printf("%d", z);
+	        }
+	        else{
+                printf("%d", i);
+            }
+	    }
+	    //salje u novi red
+	    printf("\n");
+	}
+	return 0;
+}
