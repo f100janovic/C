@@ -80,8 +80,7 @@ int main()
     int i;
     i=0;
     while ((c=getchar())!='\n'){
-        n[i]=c;
-        i++;
+
         if (c>64 && c<91){
             c=c+32;
             putchar(c);
@@ -90,6 +89,12 @@ int main()
  		    c=c-32;
             putchar(c);
  	    }
+ 	    else{
+            c=c;
+            putchar(c);
+ 	    }
     }
     return 0;
 }
+
+
