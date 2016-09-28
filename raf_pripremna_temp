@@ -75,7 +75,6 @@ velike ili obrnuto*/
 
 int main()
 {
-    char n[500];
     char c;
     int i;
     i=0;
