@@ -92,3 +92,37 @@ int main()
 }
 
 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x[500];
+    int k[500];
+    int i,c,n;
+    i=0;
+    c=1;
+    while(c!=0)
+    {
+        scanf("%d", &c);
+        if(c!=0){
+            x[i]=c;
+        }
+        else if (c==0){
+           n=i;
+        }
+        i++;
+    }
+    i=1;
+    c=1;
+    while(c!=0){
+        c=x[i];
+        printf("%d", c/n);
+        k[i]=c/n;
+        i++;
+    }
+    return 0;
+}
+
+
