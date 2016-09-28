@@ -64,3 +64,32 @@ int main(){
 	}
 	return 0;
 }
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+/* ceka input dok ne unesem enter i onda sve manje pretvara u
+velike ili obrnuto*/
+
+int main()
+{
+    char n[500];
+    char c;
+    int i;
+    i=0;
+    while ((c=getchar())!='\n'){
+        n[i]=c;
+        i++;
+        if (c>64 && c<91){
+            c=c+32;
+            putchar(c);
+ 	    }
+        else if (c>96 && c<123){
+ 		    c=c-32;
+            putchar(c);
+ 	    }
+    }
+    return 0;
+}
