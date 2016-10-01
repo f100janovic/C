@@ -1,1 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+//izbacuje najveci broj u nizu i njegov index
+void max(int a[],int k,int *maxk,int *maxi){
+    int m;
+    *maxi=a[0];
+    *maxk=0;
+    for(m=0;m<k;m++){
+        if ((a[m])>(*maxi)){
+            *maxi=a[m];
+            *maxk=m;
+        }
+    }
+    return;
+}
+int main()
+{
+    int a[128],i,k,maxa,maxb;
+    i=1;
+    k=0;
+    while(i!=0)
+    {
+        scanf("%d", &i);
+        if(i!=0){
+            a[k]=i;
+            k++;
+        }
+    }
+    maxa=5;
+    maxb=7;
+
+    max(a,k,&maxa,&maxb);
+    printf("%d %d\n", maxb,maxa);
+    return 0;
+}
+
 
