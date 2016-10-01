@@ -1,8 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
+#include <stdio.h>
 #include <string.h>
-int main(){
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
 
-	return 0;
+int main(){
+    int N; 
+    scanf("%d",&N);
+    if (N%2==1){
+        printf("Weird\n");
+    }
+    else if (N>=2 && N<=5){
+        printf("Not Weird\n");
+    }
+    else if (N>=6 && N<=20){
+        printf("Weird\n");
+    }
+    else if (N>20){
+        printf("Not Weird\n");
+    }
+    return 0;
 }
