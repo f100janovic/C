@@ -56,3 +56,23 @@ int main()
 	printf("%d\n", (rand()%(y +1 -x)+x)*k);
 	return 0;
 }
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char slovo;
+    int k;
+    scanf("%d %c", &k, &slovo);
+    k=k%26;
+    if (slovo + k > 'z'){
+        printf("%c", 'a'+k-('z'-slovo+1));
+    }
+    else{
+        printf("%c", slovo+k);
+    }
+    return 0;
+}
