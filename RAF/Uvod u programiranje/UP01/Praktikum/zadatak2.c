@@ -12,7 +12,7 @@ int main()
     k=k%26;
     /*ako slovo + broj pomeraja daju ascii vrednos vecu od slova z
     onda ispisuje novo slovo prema formuli 'z'-slovo+1,
-    tj. posmatra listu od kraja i tome se prilagodjava*/
+    tj. posmatra listu od kraja*/
     if (slovo + k > 'z'){
         printf("%c", 'a'+k-('z'-slovo+1));
     }
