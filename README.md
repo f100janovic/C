@@ -16,6 +16,6 @@ Izazovi napisani u C jeziku.
 
 Uglavnom su to matematički izazovi dati na predavanjima na RAF-u.
 
-Svi se mogu pokrenuti kompajlovanjem main.c fajla u folderu svakog izazova a opis svakog je dat kao prvi višelinijski komentar u svakoj skripti(Na Engleskom jeziku).
+Svi se mogu pokrenuti kompajlovanjem main.c fajla u folderu svakog izazova a opis svakog je dat kao komentar u svakoj skripti.
 
 Krace skripte nisu detaljno objašnjene komentarima zbog svoje jednostavnosti, ali ako ikad odlučim da napišem neku dužu ili složeniju skriptu, onda ću je objasniti korak po korak tako da mogu svi da je razumeju.
