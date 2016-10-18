@@ -1,27 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-//Izračunati y po sledećoj formuli:
-/*
-	-2x, x<0
-y=	x, 0<=x<1
-	x^2, x>=1
-*/
+/*NP koji proverava da li je uneta godina prestupna*/
 int main(){
-	int x,y;
-	//unos broja x
-	scanf("%d", &x);
-	//provera gore navedene uslove i izbacuje odgovarajucu vrednost za y
-	if (x<0){
-		y=(-2)*x;
-	}
-	else if (x>=1){
-		y=pow(x,2);
+	int i;
+	//unos godine
+	scanf("%d", &i);
+	/*
+	Algoritam:
+	Godina je prestupna ako broj godine deljiv sa četiri, i
+	važi jedno od sledeća dva:
+		-broj godine nije deljiv sa 100
+		-broj godine je deljiv sa 400
+	*/
+	if (i%4==0){
+		if (i%100!=0||i%400==0){
+			printf("Godina je prestupna\n");
+		}
+		else{
+			printf("Godina nije prestupna\n");
+		}
 	}
 	else{
-		y=pow(x,2);
+		printf("Godina nije prestupna\n");
 	}
-	//ispisuje vrednost y
-	printf("%d\n", y);
+
 	return 0;
 }
