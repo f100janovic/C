@@ -5,8 +5,15 @@
 int main(){
     int i,n;
     scanf("%d",&n);
+    //proverava da li je broj deljiv bilo kojim brojem od 2 do n/2
     for(i=2;i<=n/2;i++){
-        if(n%i==0) printf("Nije prost\n"); break;
+        //ako je deljiv bilo kojim brojem on ispisuje da nije prost i prekida se petlja
+        if(n%i==0){
+            printf("Nije prost\n");
+            break;
+        }
+        //a ako dodje do kraja petlje onda ispisuje da jeste prost
+        if(i==n/2) printf("Jeste prost\n");
     }
     return 0;
 }
