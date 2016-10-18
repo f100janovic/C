@@ -22,14 +22,14 @@ int main()
             if ((i==1)||(i==d)){
                 printf("\n");
                 for (a=1;a<=d;a++){
-                    printf("*");
+                    printf("#");
                 }
             }
             else{
                 printf("\n");
                 for(x=1;x<=d;x++){
                     if((x==1)||(x==d)){
-                        printf("*");
+                        printf("#");
                     }
                     else{
                         printf(" ");
