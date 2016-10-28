@@ -1,92 +1,43 @@
-Prazno do sledeceg praktikuma ;)
-
 #include <stdio.h>
 #include <stdlib.h>
-//NP koji ispisuje srednju vrednost unetih prirodnih brojeva. Kraj je kada korisnik unese 0.
-int main()
-{
-    int s,i,n;
-    n=0;
-    s=0;
-    while((i=getchar())!=0){
-        s=s+i;
-        n++;
+//NP koji za uneti broj n određuje njegov najbliži prost broj.
+
+int prost(int a){
+    int n,i;
+    for(i=2;i<a;i++){
+        if(a%i==0) n=0;
+        else if(i==a) n=1;
     }
-    printf("%d\n",s/n);
-    return 0;
+    return n;
 }
 
-
-#include <stdio.h>
-#include <stdlib.h>
-//NP koji određuje najveći broj od prirodnih brojeva koje unosi korisnik. Kraj je kada korisnik unese 0.
 int main(){
-    int i,m;
-    m=0;
-    while((i=getchar())!='0'){
-        if(i>m){
-            m=i;
+    int i,n,a,b,c,d;
+    scanf("%d", &n);
+    i=1;
+    while(1){
+        if(prost(n+i)){
+            a=n+i;
+            break;
         }
+
+        i++;
     }
-    return 0;
-}
-
-
-
-#include <stdio.h>
-#include <stdlib.h>
-//NP koji ispisuje n-ti stepen broja a. Broj n je ceo broj dok je a realan broj. Ne koristiti funkciju pow.
-int main(){
-    int a,n,i,d;
-    scanf("%d %d", &a,&n);
-    d=a;
-    for(i=0;i<=n;i++){
-        a=a*d;
-    }
-    printf("%d\n",a);
-    return 0;
-}
-
-
-
-#include <stdio.h>
-#include <stdlib.h>
-//NP koji izbacuje razmake iz ulaznog teksta.
-
-int main(){
-    char c;
-    while((c=getchar())!=EOF){
-        if (c==' ') c='';
-    }
-    return 0;
-}
-
-
-#include <stdio.h>
-#include <stdlib.h>
-//NP koji izbacuje samoglasnike iz ulaznog teksta.
-int main(){
-    char c;
-    while((c=getchar())!=EOF){
-        if (c=='a'||c=='A'||c=='e'||c=='e'||c=='i'||c=='I'||c=='o'||c=='O'||c=='u'||c=='U') c='';
-    }
-    return 0;
-}
-
-
-#include <stdio.h>
-#include <stdlib.h>
-//verovatno nece da radi, u while funkciji koja je u if funkciji treba isto da ima da cita tekst
-//NP koji izbacuje sav tekst koji se nalazi u zagradi. Ne postoje ugnježdene zagrade.
-
-int main(){
-    char c;
-    while((c=getchar())!=EOF){
-        if(c=='('){
-            while (c!=')'){
-                c='';
-            }
+    b=i;
+    i=1;
+    while(1){
+        if(prost(n-i)){
+            c=n-i;
+            break;
         }
+        i++;
+    }
+    d=i;
+    if(b>d){
+        printf("%d je najblizi prost broj broju %d\n",c,n);
+    }
+    else{
+        printf("%d je najblizi prost broj broju %d\n", a,n);
+    }
     return 0;
 }
-
