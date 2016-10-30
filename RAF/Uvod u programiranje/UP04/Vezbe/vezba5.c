@@ -4,7 +4,7 @@
 //trenutno je infinite loop
 int prost(int a){
     int n,i;
-    for(i=2;i<a;i++){
+    for(i=2;i<=a;i++){
         if(a%i==0) n=0;
         else if(i==a) n=1;
     }
@@ -12,16 +12,18 @@ int prost(int a){
 }
 
 int main(){
-    int i,n,a,b,c,d;
+    int i,n,a,b,c,d,l;
     scanf("%d", &n);
-    i=1;
+    i=0;
+    l=n;
     while(!prost(n+i)){
         i++;
     }
     b=i;
     a=n+i;
-    i=1;
-    while(!prost(n-i)){
+    printf("%d\n", a);
+    i=0;
+    while(!prost(n-i)&&(n-i)>0){
         i++;
     }
     d=i;
