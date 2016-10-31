@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 //NP koji za uneti broj n određuje njegov najbliži prost broj.
-//trenutno je infinite loop
 int prost(int a){
     int n,i;
-    for(i=2;i<=a;i++){
-        if(a%i==0) n=0;
-        else if(i==a) n=1;
+    for(i=2;i<a;i++){
+        if(a%i==0){
+            n=0;
+            break;
+        }
+        else if(i==a-1) n=1;
     }
     return n;
 }
@@ -21,7 +23,6 @@ int main(){
     }
     b=i;
     a=n+i;
-    printf("%d\n", a);
     i=0;
     while(!prost(n-i)&&(n-i)>0){
         i++;
