@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-#include <stdio.h>
-#include <stdlib.h>
-//NP koji za uneti broj n određuje njegov najbliži prost broj.
-
-int prost(int a){
-    int n,i;
-    for(i=2;i<a;i++){
-        if(a%i==0) n=0;
-        else if(i==a) n=1;
-    }
-    return n;
-}
-
-int main(){
-    int i,n,a,b,c,d;
-    scanf("%d", &n);
-    i=1;
-    while(1){
-        if(prost(n+i)){
-            a=n+i;
-            break;
-        }
-
-        i++;
-    }
-    b=i;
-    i=1;
-    while(1){
-        if(prost(n-i)){
-            c=n-i;
-            break;
-        }
-        i++;
-    }
-    d=i;
-    if(b>d){
-        printf("%d je najblizi prost broj broju %d\n",c,n);
-    }
-    else{
-        printf("%d je najblizi prost broj broju %d\n", a,n);
-    }
-    return 0;
-}
-=======
-
 #include <stdio.h>
 #include <stdlib.h>
 /*Napisati funkciju koja vraca najveci broj uzastopnih istih cifara u datom broju.
@@ -74,4 +28,3 @@ int main(){
 }
 
 Prazno do sledeceg praktikuma ;)
->>>>>>> 3a022c3f561017b1f9bd761b5d647966dcc0e11f
