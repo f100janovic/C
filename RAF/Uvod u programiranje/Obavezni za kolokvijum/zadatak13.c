@@ -4,14 +4,15 @@
 zagradama.*/
 int main(){
     char ch;
-    while(ch=getchar()!='\n'){
-        if(ch='('){
-            while(ch=getchar()!=')'){
-                putchar('0');
+    while((ch=getchar())!='\n'){
+        if(ch=='('){
+            while((ch=getchar())!=')'){
+                ;
             }
         }
-        putchar(ch);
-
+        else{
+            putchar(ch);
+        }
     }
     return 0;
 }
