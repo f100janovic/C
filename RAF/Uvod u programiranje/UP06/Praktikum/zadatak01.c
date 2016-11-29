@@ -14,13 +14,14 @@ void ispisi(int matrica[][100], int m, int n){
     int i,j;
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
-            printf("%d", matrica[i][j]);
+            printf("%d ", matrica[i][j]);
         }
+        putchar('\n');
     }
 }
 void min(int matrica[][100], int m, int n){
     int i,j,min;
-    min=INT_MAX;
+    min=matrica[0][0];
     for(i=0;i<m;i++){
             for(j=0;j<n;j++){
                 if(matrica[i][j]<min){
@@ -32,7 +33,7 @@ void min(int matrica[][100], int m, int n){
 }
 void max(int matrica[][100], int m, int n){
     int i,j,max;
-    max=INT_MIN;
+
     for(i=0;i<m;i++){
             for(j=0;j<n;j++){
                 if(matrica[i][j]>max){
@@ -44,7 +45,7 @@ void max(int matrica[][100], int m, int n){
 }
 int main()
 {
-    int matrica[0][100],m,n,c;
+    int matrica[100][100],m,n;
     printf("Unesi dimenzije matrice\n");
     scanf("%d %d", &m, &n);
     upisi(matrica,m,n);
