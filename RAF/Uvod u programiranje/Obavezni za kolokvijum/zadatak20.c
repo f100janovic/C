@@ -20,7 +20,7 @@ int main(){
     scanf("%d", &n);
     i=1;
     l=n;
-    while(prost(n)==0){
+    while(!prost(n)){
         n++;
     }
     b=n-l;

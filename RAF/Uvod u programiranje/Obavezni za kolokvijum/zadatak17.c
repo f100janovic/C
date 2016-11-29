@@ -7,25 +7,28 @@ iscrtava trougao sa n redova
 */
 int main()
 {
-    int a,n,b,d,x;
-    a=1;
-    scanf("%d", &n);
-    for (x=0;x<n;x++){
-        for(d=1;d<=n-x;d++){
-            printf(" ");
-        }
-        for (b=1;b<=a;b++)
-        {
-            if(b%2==1){
-                printf("*");
-            }
-            if(b%2==0){
-                printf(" ");
-            }
+ 	int n,i,j,k;
+	printf("Unesite visinu figure: \n"); //ovo je haos
+	scanf("%d",&n);
 
-        }
-        a+=2;
-        printf("\n");
-    }
-    return 0;
+	for(i = 1;i<=n;i++)
+	{
+
+		for(j = 0;j< n * 2 -1;j++)
+		{
+			printf(" ");
+		 	if(j == n-i){
+				for(k = 0; k < 1+(i -1)*2;k++)
+				{
+					printf("*");
+
+				}
+				break;
+			}
+
+		}
+
+		printf("\n");
+	}
+
 }
