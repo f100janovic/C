@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 //prosecan broj u funkciji
 void upis(int a[], int n){
   int i;
