@@ -1,3 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Cvor{
+    int vrednost;\
+    struct Cvor* levi;
+    struct Cvor* desni;
+} Cvor;
+
+Cvor* noviCvor(int vrednost){
+    Cvor* ret = malloc(sizeof(Cvor));
+    ret->vrednost = vrednost;
+    ret->levi = ret->desni = NULL;
+    return ret;
+}
+
+void ispisiPreorder(Cvor* curr){
+    if (curr==NULL) return;
+    printf("%d ", curr->vrednost);
+    ispisiPreorder(curr->levi);
+    ispisiPreorder(curr->desni);
+}
+
+void ispisiPostorder(Cvor* curr){
+    if (curr==NULL) return;
+    ispisiPreorder(curr->levi);
+    ispisiPreorder(curr->desni);
+    printf("%d ", curr->vrednost);
+}
+
+void ispisiInorder(Cvor* curr){
+    if (curr==NULL) return;
+    ispisiPreorder(curr->levi);
+    printf("%d ", curr->vrednost);
+    ispisiPreorder(curr->desni);
+}
+
+int main()
+{
+    Cvor* koren = noviCvor(5);
+    Cvor* leviSin = noviCvor(7);
+    koren->desni = noviCvor(9);
+    koren->levi = leviSin;
+    leviSin->levi = noviCvor(3);
+    leviSin->desni = noviCvor(11);
+    ispisiPreorder(koren);
+    printf("\n");
+    ispisiInorder(koren);
+    printf("\n");
+    ispisiPostorder(koren);
+    return 0;
+}
 
 ====================================
 Prazno do sledeceg praktikuma ;)
